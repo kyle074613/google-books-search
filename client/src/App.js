@@ -1,17 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Saved from "./pages/Saved";
+import Search from "./pages/Search";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
+    <Router>
+      <div className="container">
+        <Navbar />
+        <Header />
       </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-    </div>
+    </Router>
   );
 }
 
