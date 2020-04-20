@@ -9,7 +9,7 @@ function SearchBar(props) {
             <div className="row">
                 <div className="col">
                     <form className="search">
-                        <input></input>
+                        <input onChange={props.onChange}></input>
                         <button type="submit" onClick={props.handleFormSubmit}>Search</button>
                     </form>
                 </div>

@@ -13,8 +13,8 @@ function BooksList(props) {
                     </div>
                 </div>
                 <div className="col-sm-4">
-                    <button onclick={handleClick1}>{props.saveOrView}</button>
-                    <button onclick={handleClick2}>{props.saveOrDelete}</button>
+                    <button onClick={props.handleClick1}>{props.saveOrView}</button>
+                    <button onClick={props.handleClick2}>{props.saveOrDelete}</button>
                 </div>
             </div>
             <div className="row">

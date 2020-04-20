@@ -8,9 +8,16 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <Router>
-      <div className="container">
-        <Navbar />
-        <Header />
+      <div className="wrapper">
+        <div className="container">
+          <Navbar />
+          <Header />
+          <Switch>
+            <Route exact path={["/", "/books"]}>
+              <Search />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );
