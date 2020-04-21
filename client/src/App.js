@@ -13,7 +13,7 @@ function App() {
           <Navbar />
           <Header />
           <Switch>
-            <Route exact path={["/", "/books"]}>
+            <Route exact path={["/", "/search"]}>
               <Search />
             </Route>
           </Switch>

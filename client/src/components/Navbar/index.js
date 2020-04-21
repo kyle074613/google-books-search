@@ -13,9 +13,10 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link to="/search" className={location.pathname === "/search" ? "nav-link active" : "nav-link"}>
+                                <Link to="/search"
+                                    className={location.pathname === "/search" || "/" ? "nav-link active" : "nav-link"}>
                                     Search
-                        </Link>
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/saved" className={location.pathname === "/saved" ? "nav-link active" : "nav-link"}>

@@ -2,9 +2,11 @@ import React from "react";
 
 function SearchBar(props) {
     return (
-        <div>
+        <div className="mb-2">
             <div className="row">
-                <h4>Book Search</h4>
+                <div className="col">
+                    <h4>Book Search</h4>
+                </div>
             </div>
             <div className="row">
                 <div className="col">
