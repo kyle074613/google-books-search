@@ -7,7 +7,7 @@ function Navbar() {
 
     return (
         <nav className="navbar border-bottom border-dark navbar-expand navbar-light bg-light">
-            <div className="navbar-brand">Google Books</div>
+            <div className="navbar-brand">Google Books Search</div>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
