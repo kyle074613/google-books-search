@@ -34,12 +34,8 @@ function Search() {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        console.log(query)
         API.search(query).then(result => {
-            console.log(result.data.items);
             setResults(result.data.items);
-            console.log(results)
-
         })
             .catch(err => {
                 console.log(err);
@@ -58,7 +54,7 @@ function Search() {
             description: bookToSave.volumeInfo.description,
             image: bookToSave.volumeInfo.imageLinks ? bookToSave.volumeInfo.imageLinks.thumbnail : "https://via.placeholder.com/150",
             link: bookToSave.volumeInfo.previewLink
-        }).then(res => console.log(res.data.title, "saved!"))
+        })
             .catch(err => console.log(err));
     };
 
