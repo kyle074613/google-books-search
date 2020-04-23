@@ -9,8 +9,9 @@ function App() {
   return (
     <Router>
       <div className="wrapper">
+        <Navbar />
         <div className="container">
-          <Navbar />
+
           <Header />
           <Switch>
             <Route exact path={["/", "/search"]}>

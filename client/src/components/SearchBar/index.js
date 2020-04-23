@@ -2,7 +2,7 @@ import React from "react";
 
 function SearchBar(props) {
     return (
-        <div className="mb-2">
+        <div className="border p-3 mb-2">
             <div className="row">
                 <div className="col">
                     <h4>Book Search</h4>
@@ -11,7 +11,7 @@ function SearchBar(props) {
             <div className="row">
                 <div className="col">
                     <form className="search">
-                        <input onChange={props.onChange}></input>
+                        <input className="px-1" onChange={props.onChange}></input>
                         <button type="submit" onClick={props.handleFormSubmit}>Search</button>
                     </form>
                 </div>
