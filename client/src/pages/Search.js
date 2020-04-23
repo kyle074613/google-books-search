@@ -11,7 +11,7 @@ function Search() {
 
     const handleInputChange = (e) => {
         setQuery(e.target.value);
-    }
+    };
 
     const printAuthors = (array) => {
         if (array === undefined) {
@@ -30,7 +30,7 @@ function Search() {
                 authors += array[i] + ', ';
 
         return authors;
-    }
+    };
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
