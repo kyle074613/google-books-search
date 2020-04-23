@@ -17,10 +17,10 @@ function BooksList(props) {
                     </div>
                 </div>
                 <div className="col-sm-4 text-right">
-                    <a href={props.bookLink} target="_blank" className="mr-1">
+                    <a href={props.bookLink} rel="noopener noreferrer" target="_blank" className="mr-1">
                         <button>View</button>
                     </a>
-                    <button onClick={props.handleClick}>{props.saveOrDelete}</button>
+                    <button onClick={props.handleClick} bookid={props.bookId}>{props.saveOrDelete}</button>
                 </div>
             </div>
             <div className="row">

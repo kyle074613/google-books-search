@@ -49,7 +49,17 @@ function Search() {
     };
 
     const handleClick = (e) => {
-        console.log(e.target)
+        const bookToSave = results.find(result => result.id === e.target.getAttribute("bookid"));
+
+        API.saveBook({
+            bookId: bookToSave.id,
+            title: bookToSave.volumeInfo.title,
+            authors: bookToSave.volumeInfo.authors,
+            description: bookToSave.volumeInfo.description,
+            image: bookToSave.volumeInfo.imageLinks ? bookToSave.volumeInfo.imageLinks.thumbnail : "https://via.placeholder.com/150",
+            link: bookToSave.volumeInfo.previewLink
+        }).then(res => console.log(res.data.title, "saved!"))
+            .catch(err => console.log(err));
     };
 
     return (
@@ -65,7 +75,8 @@ function Search() {
                             description={book.volumeInfo.description}
                             bookLink={book.volumeInfo.previewLink}
                             saveOrDelete="Save"
-                            handleClick={handleClick} />
+                            handleClick={handleClick}
+                            bookId={book.id} />
                     </li>
                 ))}
             </ul>
