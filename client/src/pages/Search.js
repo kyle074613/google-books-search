@@ -14,6 +14,10 @@ function Search() {
     }
 
     const printAuthors = (array) => {
+        if (array === undefined) {
+            return "";
+        }
+
         let authors = "";
 
         if (array.length === 1)
@@ -44,11 +48,8 @@ function Search() {
 
     };
 
-    const handleViewClick = (e) => {
-    };
-
-    const handleSaveClick = (e) => {
-
+    const handleClick = (e) => {
+        console.log(e.target)
     };
 
     return (
@@ -58,15 +59,13 @@ function Search() {
                 {results.map(book => (
                     <li key={book.id} className="list-group-item">
                         <BooksList
-                            results={results}
                             title={book.volumeInfo.title}
                             authors={printAuthors(book.volumeInfo.authors)}
                             image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "https://via.placeholder.com/150"}
                             description={book.volumeInfo.description}
                             bookLink={book.volumeInfo.previewLink}
                             saveOrDelete="Save"
-                            handleClick1={handleViewClick}
-                            handleClick2={handleSaveClick} />
+                            handleClick={handleClick} />
                     </li>
                 ))}
             </ul>

@@ -20,7 +20,7 @@ function BooksList(props) {
                     <a href={props.bookLink} target="_blank" className="mr-1">
                         <button>View</button>
                     </a>
-                    <button onClick={props.handleClick2}>{props.saveOrDelete}</button>
+                    <button onClick={props.handleClick}>{props.saveOrDelete}</button>
                 </div>
             </div>
             <div className="row">
